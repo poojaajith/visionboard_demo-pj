@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdemoactv"
+		},
+		"DS_OUTPUTTXT_connectionString": {
+			"value": ""
+		},
+		"DS_XLSX_connectionString": {
+			"value": ""
+		},
+		"LS_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_ADLSADF_accountKey": {
+			"value": ""
+		},
+		"LS_ADLSTXT_accountKey": {
+			"value": ""
+		},
+		"LS_CSVbinary_connectionString": {
+			"value": ""
+		},
+		"LS_OUTPUTCSV_connectionString": {
+			"value": ""
+		},
+		"LS_OUTPUT_CSV_connectionString": {
+			"value": ""
+		},
+		"LS_OUTPUT_SAMPLE_connectionString": {
+			"value": ""
+		},
+		"LS_TXT_connectionString": {
+			"value": ""
+		},
+		"LS_XLSXbinary_connectionString": {
+			"value": ""
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_ADLSADF_properties_typeProperties_url": {
+			"value": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_ADLSTXT_properties_typeProperties_url": {
+			"value": "https://adlsadfactv.dfs.core.windows.net/"
+		}
+	}
+}

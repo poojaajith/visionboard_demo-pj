@@ -1,0 +1,160 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdemoactv"
+		},
+		"DS_OUTPUTTXT_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'DS_OUTPUTTXT'"
+		},
+		"DS_XLSX_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'DS_XLSX'"
+		},
+		"LS_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS'"
+		},
+		"LS_ADLSADF_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLSADF'"
+		},
+		"LS_ADLSTXT_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLSTXT'"
+		},
+		"LS_CSVbinary_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_CSVbinary'"
+		},
+		"LS_OUTPUTCSV_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_OUTPUTCSV'"
+		},
+		"LS_OUTPUT_CSV_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_OUTPUT_CSV'"
+		},
+		"LS_OUTPUT_SAMPLE_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_OUTPUT_SAMPLE'"
+		},
+		"LS_TXT_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_TXT'"
+		},
+		"LS_XLSXbinary_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_XLSXbinary'"
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_ADLSADF_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_ADLSTXT_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdemoactv_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"DS_OUTPUTTXT_connectionString": {
+						"value": "[parameters('DS_OUTPUTTXT_connectionString')]"
+					},
+					"DS_XLSX_connectionString": {
+						"value": "[parameters('DS_XLSX_connectionString')]"
+					},
+					"LS_ADLS_accountKey": {
+						"value": "[parameters('LS_ADLS_accountKey')]"
+					},
+					"LS_ADLSADF_accountKey": {
+						"value": "[parameters('LS_ADLSADF_accountKey')]"
+					},
+					"LS_ADLSTXT_accountKey": {
+						"value": "[parameters('LS_ADLSTXT_accountKey')]"
+					},
+					"LS_CSVbinary_connectionString": {
+						"value": "[parameters('LS_CSVbinary_connectionString')]"
+					},
+					"LS_OUTPUTCSV_connectionString": {
+						"value": "[parameters('LS_OUTPUTCSV_connectionString')]"
+					},
+					"LS_OUTPUT_CSV_connectionString": {
+						"value": "[parameters('LS_OUTPUT_CSV_connectionString')]"
+					},
+					"LS_OUTPUT_SAMPLE_connectionString": {
+						"value": "[parameters('LS_OUTPUT_SAMPLE_connectionString')]"
+					},
+					"LS_TXT_connectionString": {
+						"value": "[parameters('LS_TXT_connectionString')]"
+					},
+					"LS_XLSXbinary_connectionString": {
+						"value": "[parameters('LS_XLSXbinary_connectionString')]"
+					},
+					"LS_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_properties_typeProperties_url')]"
+					},
+					"LS_ADLSADF_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLSADF_properties_typeProperties_url')]"
+					},
+					"LS_ADLSTXT_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLSTXT_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfdemoactv_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdemoactv_ArmTemplate_0')]"
+			]
+		}
+	]
+}
