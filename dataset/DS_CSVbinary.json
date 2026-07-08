@@ -1,0 +1,18 @@
+{
+	"name": "DS_CSVbinary",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_CSVbinary",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "outputcsv"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

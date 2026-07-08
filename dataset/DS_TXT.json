@@ -1,0 +1,18 @@
+{
+	"name": "DS_TXT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_TXT",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "outputtext"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
