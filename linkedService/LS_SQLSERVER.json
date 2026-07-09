@@ -7,7 +7,7 @@
 			"server": "localhost\\SQLEXPRESS",
 			"database": "visionboard",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "pooja",
 			"password": {
