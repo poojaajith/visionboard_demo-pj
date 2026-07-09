@@ -38,6 +38,12 @@
 		"LS_XLSXbinary_connectionString": {
 			"value": ""
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://keyvaultadfactv.vault.azure.net/"
+		},
+		"AzureKeyVaultJuly09_properties_typeProperties_baseUrl": {
+			"value": "https://keyvaultadfactivities.vault.azure.net/"
+		},
 		"LS_ADLS_properties_typeProperties_url": {
 			"value": "https://adlsadfactv.dfs.core.windows.net/"
 		},
@@ -46,6 +52,24 @@
 		},
 		"LS_ADLSTXT_properties_typeProperties_url": {
 			"value": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_SQLSERVER_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_properties_typeProperties_database": {
+			"value": "visionboard"
+		},
+		"LS_SQLSERVER_properties_typeProperties_userName": {
+			"value": "pooja"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "visionboard"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "pooja"
 		},
 		"containerUri": {
 			"value": ""
