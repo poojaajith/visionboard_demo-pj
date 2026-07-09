@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVaultJuly09",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://keyvaultadfactivities.vault.azure.net/"
+		}
+	}
+}
