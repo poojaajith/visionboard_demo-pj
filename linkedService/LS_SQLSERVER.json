@@ -1,0 +1,27 @@
+{
+	"name": "LS_SQLSERVER",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\SQLEXPRESS",
+			"database": "visionboard",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "pooja",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultJuly09",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "poojasqlpwd"
+			}
+		},
+		"connectVia": {
+			"referenceName": "SelfhostedIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
