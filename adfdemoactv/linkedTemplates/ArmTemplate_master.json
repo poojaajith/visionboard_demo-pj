@@ -43,6 +43,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_OUTPUT_SAMPLE'"
 		},
+		"LS_OUTPUTonpremSQLtoADLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_OUTPUTonpremSQLtoADLS'"
+		},
+		"LS_OnpremSQLtoADLS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_OnpremSQLtoADLS'"
+		},
 		"LS_TXT_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_TXT'"
@@ -70,6 +78,18 @@
 		"LS_ADLSTXT_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_OnpremSQLtoADLS_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_OnpremSQLtoADLS_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorksDW2025"
+		},
+		"LS_OnpremSQLtoADLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pooja"
 		},
 		"LS_SQLSERVER_properties_typeProperties_server": {
 			"type": "string",
@@ -149,6 +169,9 @@
 					"LS_OUTPUT_SAMPLE_connectionString": {
 						"value": "[parameters('LS_OUTPUT_SAMPLE_connectionString')]"
 					},
+					"LS_OUTPUTonpremSQLtoADLS_connectionString": {
+						"value": "[parameters('LS_OUTPUTonpremSQLtoADLS_connectionString')]"
+					},
 					"LS_TXT_connectionString": {
 						"value": "[parameters('LS_TXT_connectionString')]"
 					},
@@ -187,6 +210,18 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LS_OnpremSQLtoADLS_password": {
+						"value": "[parameters('LS_OnpremSQLtoADLS_password')]"
+					},
+					"LS_OnpremSQLtoADLS_properties_typeProperties_server": {
+						"value": "[parameters('LS_OnpremSQLtoADLS_properties_typeProperties_server')]"
+					},
+					"LS_OnpremSQLtoADLS_properties_typeProperties_database": {
+						"value": "[parameters('LS_OnpremSQLtoADLS_properties_typeProperties_database')]"
+					},
+					"LS_OnpremSQLtoADLS_properties_typeProperties_userName": {
+						"value": "[parameters('LS_OnpremSQLtoADLS_properties_typeProperties_userName')]"
 					},
 					"LS_SQLSERVER_properties_typeProperties_server": {
 						"value": "[parameters('LS_SQLSERVER_properties_typeProperties_server')]"

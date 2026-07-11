@@ -32,6 +32,12 @@
 		"LS_OUTPUT_SAMPLE_connectionString": {
 			"value": ""
 		},
+		"LS_OUTPUTonpremSQLtoADLS_connectionString": {
+			"value": ""
+		},
+		"LS_OnpremSQLtoADLS_password": {
+			"value": ""
+		},
 		"LS_TXT_connectionString": {
 			"value": ""
 		},
@@ -52,6 +58,15 @@
 		},
 		"LS_ADLSTXT_properties_typeProperties_url": {
 			"value": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_OnpremSQLtoADLS_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_OnpremSQLtoADLS_properties_typeProperties_database": {
+			"value": "AdventureWorksDW2025"
+		},
+		"LS_OnpremSQLtoADLS_properties_typeProperties_userName": {
+			"value": "pooja"
 		},
 		"LS_SQLSERVER_properties_typeProperties_server": {
 			"value": "localhost\\SQLEXPRESS"
