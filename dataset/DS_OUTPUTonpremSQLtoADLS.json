@@ -1,0 +1,22 @@
+{
+	"name": "DS_OUTPUTonpremSQLtoADLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_OUTPUTonpremSQLtoADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "outputonpremsqltoadls"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

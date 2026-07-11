@@ -1,0 +1,12 @@
+{
+	"name": "DS_OnpremSQLtoADLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_OnpremSQLtoADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
