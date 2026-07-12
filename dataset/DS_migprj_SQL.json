@@ -1,0 +1,12 @@
+{
+	"name": "DS_migprj_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_migprj_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
