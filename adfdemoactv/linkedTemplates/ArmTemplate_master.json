@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_CSVbinary'"
 		},
+		"LS_LKUP_MAX_VALUE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_LKUP_MAX_VALUE'"
+		},
 		"LS_OUTPUTCSV_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_OUTPUTCSV'"
@@ -51,6 +55,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_OnpremSQLtoADLS'"
 		},
+		"LS_SQLTABLE_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SQLTABLE_PARQUET'"
+		},
 		"LS_TXT_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_TXT'"
@@ -58,6 +66,10 @@
 		"LS_XLSXbinary_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_XLSXbinary'"
+		},
+		"LS_migprj_SQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_migprj_SQL'"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
@@ -78,6 +90,18 @@
 		"LS_ADLSTXT_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsadfactv.dfs.core.windows.net/"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "OnpremMigrProj"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pooja"
 		},
 		"LS_OnpremSQLtoADLS_properties_typeProperties_server": {
 			"type": "string",
@@ -100,6 +124,22 @@
 			"defaultValue": "visionboard"
 		},
 		"LS_SQLSERVER_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pooja"
+		},
+		"LS_SQLTABLE_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://outputmigprpjjul11.dfs.core.windows.net/"
+		},
+		"LS_migprj_SQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_migprj_SQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "OnpremMigrProj"
+		},
+		"LS_migprj_SQL_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "pooja"
 		},
@@ -172,6 +212,9 @@
 					"LS_OUTPUTonpremSQLtoADLS_connectionString": {
 						"value": "[parameters('LS_OUTPUTonpremSQLtoADLS_connectionString')]"
 					},
+					"LS_SQLTABLE_PARQUET_accountKey": {
+						"value": "[parameters('LS_SQLTABLE_PARQUET_accountKey')]"
+					},
 					"LS_TXT_connectionString": {
 						"value": "[parameters('LS_TXT_connectionString')]"
 					},
@@ -192,6 +235,9 @@
 					},
 					"LS_ADLSTXT_properties_typeProperties_url": {
 						"value": "[parameters('LS_ADLSTXT_properties_typeProperties_url')]"
+					},
+					"LS_SQLTABLE_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_SQLTABLE_PARQUET_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -211,8 +257,23 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_LKUP_MAX_VALUE_password": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_password')]"
+					},
 					"LS_OnpremSQLtoADLS_password": {
 						"value": "[parameters('LS_OnpremSQLtoADLS_password')]"
+					},
+					"LS_migprj_SQL_password": {
+						"value": "[parameters('LS_migprj_SQL_password')]"
+					},
+					"LS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_properties_typeProperties_server')]"
+					},
+					"LS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_properties_typeProperties_database')]"
+					},
+					"LS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_properties_typeProperties_userName')]"
 					},
 					"LS_OnpremSQLtoADLS_properties_typeProperties_server": {
 						"value": "[parameters('LS_OnpremSQLtoADLS_properties_typeProperties_server')]"
@@ -232,6 +293,15 @@
 					"LS_SQLSERVER_properties_typeProperties_userName": {
 						"value": "[parameters('LS_SQLSERVER_properties_typeProperties_userName')]"
 					},
+					"LS_migprj_SQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_migprj_SQL_properties_typeProperties_server')]"
+					},
+					"LS_migprj_SQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_migprj_SQL_properties_typeProperties_database')]"
+					},
+					"LS_migprj_SQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_migprj_SQL_properties_typeProperties_userName')]"
+					},
 					"SqlServer1_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
 					},
@@ -245,6 +315,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'adfdemoactv_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "adfdemoactv_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdemoactv_ArmTemplate_1')]"
 			]
 		}
 	]

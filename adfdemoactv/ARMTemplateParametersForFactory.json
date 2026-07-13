@@ -23,6 +23,9 @@
 		"LS_CSVbinary_connectionString": {
 			"value": ""
 		},
+		"LS_LKUP_MAX_VALUE_password": {
+			"value": ""
+		},
 		"LS_OUTPUTCSV_connectionString": {
 			"value": ""
 		},
@@ -38,10 +41,16 @@
 		"LS_OnpremSQLtoADLS_password": {
 			"value": ""
 		},
+		"LS_SQLTABLE_PARQUET_accountKey": {
+			"value": ""
+		},
 		"LS_TXT_connectionString": {
 			"value": ""
 		},
 		"LS_XLSXbinary_connectionString": {
+			"value": ""
+		},
+		"LS_migprj_SQL_password": {
 			"value": ""
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
@@ -59,6 +68,15 @@
 		"LS_ADLSTXT_properties_typeProperties_url": {
 			"value": "https://adlsadfactv.dfs.core.windows.net/"
 		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+			"value": "OnpremMigrProj"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+			"value": "pooja"
+		},
 		"LS_OnpremSQLtoADLS_properties_typeProperties_server": {
 			"value": "localhost\\SQLEXPRESS"
 		},
@@ -75,6 +93,18 @@
 			"value": "visionboard"
 		},
 		"LS_SQLSERVER_properties_typeProperties_userName": {
+			"value": "pooja"
+		},
+		"LS_SQLTABLE_PARQUET_properties_typeProperties_url": {
+			"value": "https://outputmigprpjjul11.dfs.core.windows.net/"
+		},
+		"LS_migprj_SQL_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_migprj_SQL_properties_typeProperties_database": {
+			"value": "OnpremMigrProj"
+		},
+		"LS_migprj_SQL_properties_typeProperties_userName": {
 			"value": "pooja"
 		},
 		"SqlServer1_properties_typeProperties_server": {
